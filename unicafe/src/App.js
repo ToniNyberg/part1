@@ -36,6 +36,20 @@ const App = () => {
     )
   }
 
+  const Statistics = () => {
+    if (good + neutral + bad === 0)
+      return (
+        <p>No feedback given</p>
+      )
+    else
+      return (<>
+        <p>Average <Average /></p>
+        <p>Positive <Positive /> </p>
+      </>)
+
+
+  }
+
 
   return (
     <div>
@@ -48,8 +62,7 @@ const App = () => {
       <p>Neutral {neutral}</p>
       <p>Bad {bad}</p>
       <p>All <Total /></p>
-      <p>Average <Average /></p>
-      <p>Positive <Positive /> </p>
+      <Statistics />
     </div>
   )
 }
